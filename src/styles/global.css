@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-home-image {
+  background-image: url('/portada.png');
+  background-size: cover;
+  background-position: center;
+  height: 760px; 
+}
+
+.section-padding-r-l {
+  @apply px-3;
+}
+
+.text-aligned {
+  @apply text-3xl md:text-5xl lg:text-6xl;
+}
+
+.image-logo {
+  @apply h-12 w-12; /* 48px */
+}
+
+.text-18 {
+  @apply text-lg; /* 18px */
+  font-family: "Catamaran", sans-serif;
+}
+
+.text-16 {
+  @apply text-base; /* 16px */
+  font-family: "Catamaran", sans-serif;
+}
+
+.text-96 {
+  @apply text-8xl; /* 96px */
+  font-family: "Catamaran", sans-serif;
+}
+
+.text-18 {
+  @apply text-lg; /* 18px */
+  font-family: "Catamaran", sans-serif;
+}
+
