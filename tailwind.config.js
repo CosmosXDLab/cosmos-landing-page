@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: '#ffffff',  // Color púrpura oscuro
+        white: '#ffffff',  // Color blanco
         purple_oscuro: '#593F62',  // Color púrpura oscuro
         red_oscuro: '#36151E', // Color rojo oscuro
         purple_claro: '#7B6D8D',    // Color púrpura claro

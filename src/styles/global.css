@@ -9,6 +9,20 @@
   background-size: cover;
   background-position: center;
   height: 760px; 
+  position: relative;
+}
+
+.bg-effect-overlay {
+  background-image: url('/efecto_portada.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0.3; /* Ajusta la transparencia */
 }
 
 .section-padding-r-l {
@@ -42,4 +56,11 @@
   @apply text-lg; /* 18px */
   font-family: "Catamaran", sans-serif;
 }
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+}
+
 
