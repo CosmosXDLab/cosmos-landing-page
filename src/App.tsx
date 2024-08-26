@@ -11,16 +11,13 @@ const App: React.FC = () => {
     <div>
       <Navbar />
       <HomeSection />
-      <section id="inicio" className="h-screen bg-green-100">
-        Inicio Section
-      </section>
       <section id="servicios" className="h-screen bg-yellow-100">
         Servicios Section
       </section>
       <section id="proyectos" className="h-screen bg-red-100">
         Proyectos Section
       </section>
-      <section id="acerca" className="h-screen bg-blue-100">
+      <section id="acerca de" className="h-screen bg-blue-100">
         Acerca De Section
       </section>
       <section id="contacto" className="h-screen bg-purple-100">
