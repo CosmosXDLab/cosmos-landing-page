@@ -19,12 +19,12 @@ const HomeSection: React.FC = () => {
             <p className="text-18 font-semibold mb-10">
               Quisque quis ornare augue. Nulla sit amet arcu et ligula vel tortor iaculis vestibulum non ultrices eros.
             </p>
-            <a
-              href="#"
-              className="mt-6 inline-block w-[200px] h-[58px] text-16 font-semibold text-white bg-purple_fosforesente hover:bg-primario_b transition duration-300 flex items-center justify-center"
-            >
-              Leer Más
-            </a>
+            <button
+                onClick={() => {/* Agrega aquí la acción que deseas realizar */}}
+                className="mt-6 inline-block w-[200px] h-[58px] text-16 font-semibold text-white bg-purple_fosforesente hover:bg-primario_b transition duration-300 flex items-center justify-center"
+              >
+                Leer Más
+            </button>
           </div>
         </section>
     );
