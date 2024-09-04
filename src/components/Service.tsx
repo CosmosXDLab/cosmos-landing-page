@@ -15,9 +15,9 @@ const Service: React.FC = () => {
                 Soluciones y Servicios Profesionales de TI
             </h1>   
         </div>
-        <div className="w-full h-[310px] bg-green-500">
+        {/* <div className="w-full h-[310px] bg-green-500">
 
-        </div>
+        </div> */}
       </div>
     </div>
   );
