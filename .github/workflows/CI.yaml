@@ -24,12 +24,6 @@ jobs:
     - name: Install Firebase CLI
       run: npm install -g firebase-tools
 
-    - name: Setup Firebase project
-      run: |
-        firebase projects:list
-        firebase use --add cosmos
-        firebase use cosmos
-
     - name: Build the project
       run: npm run build
 
