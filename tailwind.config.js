@@ -13,11 +13,14 @@ export default {
         purple_claro: '#7B6D8D',    // Color púrpura claro
         purple_fosforesente: '#5F2DEE',
         gris: '#6C6A72',
+        w: '#F4F2F9',
+        black_m: '#1D1729'
 
       },
       fontFamily: {
         cortana: ['Catamaran', 'sans-serif'],
       },
+      
     },
   },
   plugins: [],

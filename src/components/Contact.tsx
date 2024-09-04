@@ -4,7 +4,7 @@ import '../styles/global.css';
 const Contact: React.FC = () => {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen h-auto xl:h-screen">
-      <div className="w-full lg:w-2/5 flex items-center justify-center p-8 bg-gray-100">
+      <div className="w-full lg:w-2/5 flex items-center justify-center p-8 bg-w">
           <div className="max-w-md items-start">
               <p className="text-16 text-purple_fosforesente font-bold mb-4">
                   ＿ Contáctanos
@@ -35,9 +35,10 @@ const Contact: React.FC = () => {
               </div>
           </div>
       </div>
-      <div className="w-full lg:w-3/5 flex items-center justify-center p-8 bg-white">
-        <div className="max-w-3xl w-full bg-gray-100 p-8">
-          <form className="space-y-6 text-14">
+      <div className="w-full lg:w-3/5 flex items-center justify-center p-10 bg-white ">
+        <div className="max-w-3xl w-full h-auto max-h-[542px] overflow-auto bg-w p-11 relative">
+          <div className="bg-effect-overlay2 absolute inset-0"></div>
+          <form className="space-y-6 text-14 relative z-10 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div>
@@ -45,7 +46,7 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full p-3 border border-gray-300"
+                    className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Nombres"
                     required
                   />
@@ -55,7 +56,7 @@ const Contact: React.FC = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full p-3 border border-gray-300"
+                    className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Teléfono"
                     required
                   />
@@ -67,7 +68,7 @@ const Contact: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full p-3 border border-gray-300"
+                    className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Correo"
                     required
                   />
@@ -77,7 +78,7 @@ const Contact: React.FC = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full p-3 border border-gray-300"
+                    className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Asunto"
                     required
                   />
@@ -88,7 +89,7 @@ const Contact: React.FC = () => {
               <textarea
                 id="message"
                 name="message"
-                className="w-full p-3 border border-gray-300 h-48"
+                className="w-full h-48 p-3 pl-6 text-gris"
                 placeholder="Escribe un mensaje"
                 required
               ></textarea>

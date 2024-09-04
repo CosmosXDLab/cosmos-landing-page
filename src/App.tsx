@@ -5,7 +5,7 @@ import Nosotros from './components/Nosotros';
 import './App.css';
 import HomeSection from './components/HomeSection';
 import Contact from './components/Contact';
-
+import Service from './components/Service';
 
 const App: React.FC = () => {
   return (
@@ -13,8 +13,8 @@ const App: React.FC = () => {
       <Navbar />
       <HomeSection />
 
-      <section id="servicios" className="section-size bg-yellow-100">
-        Servicios Section
+      <section id="servicios" className="section-size bg-white">
+      < Service />
       </section>
       <section id="proyectos" className="section-size bg-red-100">
         Proyectos Section
