@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -100,7 +100,7 @@
 }
 
 .font-catamaran {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 .font-semibold {
@@ -134,6 +134,8 @@
 
 .custom-line-height30 {
   line-height: 30px;
+  font-family: "Catamaran", sans-serif;
+
 }
 
 .custom-width {
