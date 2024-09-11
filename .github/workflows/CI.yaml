@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting
+name: Deploy to Firebase Hosting and Functions
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
     - name: Build the project
       run: npm run build
 
-    - name: Deploy to Firebase Hosting
+    - name: Deploy to Firebase Hosting and Function
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      run: firebase deploy --only hosting
+      run: firebase deploy --only hosting,functions
