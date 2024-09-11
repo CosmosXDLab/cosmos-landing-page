@@ -1,7 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/global.css';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const [formStatus, setFormStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('Enviando...');
+
+    try {
+      const response = await fetch('https://us-central1-cosmos-xd.cloudfunctions.net/contactForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus('Mensaje enviado correctamente');
+      } else {
+        setFormStatus('Error al enviar el mensaje');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setFormStatus('Error al enviar el mensaje');
+    }
+  };
+
   return (
     <div className="flex flex-col lg:flex-row min-h-screen h-auto xl:h-screen">
       <div className="w-full lg:w-2/5 flex items-center justify-center p-8 bg-w">
@@ -38,7 +79,7 @@ const Contact: React.FC = () => {
       <div className="w-full lg:w-3/5 flex items-center justify-center p-10 bg-white ">
         <div className="max-w-3xl w-full h-auto max-h-[542px] overflow-auto bg-w p-11 relative">
           <div className="bg-effect-overlay2 absolute inset-0"></div>
-          <form className="space-y-6 text-14 relative z-10 ">
+          <form onSubmit={handleSubmit} className="space-y-6 text-14 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div>
@@ -48,6 +89,8 @@ const Contact: React.FC = () => {
                     name="name"
                     className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Nombres"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -58,6 +101,8 @@ const Contact: React.FC = () => {
                     name="phone"
                     className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Teléfono"
+                    value={formData.phone}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -70,6 +115,8 @@ const Contact: React.FC = () => {
                     name="email"
                     className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Correo"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -80,6 +127,8 @@ const Contact: React.FC = () => {
                     name="subject"
                     className="w-full lg:h-[54px] pl-6 p-3 text-gris"
                     placeholder="Asunto"
+                    value={formData.subject}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -91,6 +140,8 @@ const Contact: React.FC = () => {
                 name="message"
                 className="w-full h-48 p-3 pl-6 text-gris"
                 placeholder="Escribe un mensaje"
+                value={formData.message}
+                onChange={handleChange}
                 required
               ></textarea>
             </div>
@@ -101,6 +152,7 @@ const Contact: React.FC = () => {
               Envía un mensaje
             </button>
           </form>
+          {formStatus && <p className="mt-4 text-red-500">{formStatus}</p>}
         </div>
       </div>
     </div>
