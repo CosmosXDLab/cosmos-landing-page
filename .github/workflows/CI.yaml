@@ -26,6 +26,11 @@ jobs:
 
     - name: Build the project
       run: npm run build
+    
+    - name: Install dependencies for Cloud Functions
+      run: |
+        cd functions
+        npm install
 
     - name: Deploy to Firebase Hosting and Function
       env:
