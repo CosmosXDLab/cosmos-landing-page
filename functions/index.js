@@ -1,9 +1,9 @@
 const functions = require('firebase-functions');
-const cors = require('cors')({ origin: true }); // Importamos CORS para permitir las peticiones desde cualquier origen
+const cors = require('cors')({ origin: true }); 
 
 // Función HTTP para recibir el formulario de contacto
 exports.contactForm = functions.https.onRequest((req, res) => {
-  cors(req, res, () => {  // Usamos cors para evitar problemas con CORS en el front-end
+  cors(req, res, () => {  
     if (req.method !== 'POST') {
       return res.status(405).send('Método no permitido');
     }
