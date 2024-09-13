@@ -31,6 +31,7 @@ jobs:
       run: |
         cd functions
         npm install
+        ls -l node_modules
 
     - name: Deploy to Firebase Hosting and Function
       env:
