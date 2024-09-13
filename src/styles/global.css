@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,7 +24,22 @@
   z-index: 10;
   opacity: 0.3; /* Ajusta la transparencia */
 }
+.bg-effect-overlay2 {
+  background-image: url('/efecto1.png');
+  background-size: cover;
+  background-position:center;
+  position: absolute;
+}
+.bg-effect-overlay3 {
+  background-image: url('/efecto2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  min-height: 768px;
+  position: absolute;
+  width: 1366px;
 
+}
 .section-padding-r-l {
   @apply px-3;
 }
@@ -47,15 +62,32 @@
   font-family: "Catamaran", sans-serif;
 }
 
+.text-20 {
+  @apply text-xl; /* 20px */
+  font-family: "Catamaran", sans-serif;
+}
+
+.text-14 {
+  @apply text-[14px]; /* 20px */
+  font-family: "Catamaran", sans-serif;
+}
+
 .text-96 {
   @apply text-8xl; /* 96px */
   font-family: "Catamaran", sans-serif;
 }
 
-.text-18 {
-  @apply text-lg; /* 18px */
+.text-36 {
+  @apply text-4xl; /* 36px */
   font-family: "Catamaran", sans-serif;
 }
+
+
+.text-45 {
+  @apply text-[45px];
+  font-family: "Catamaran", sans-serif;
+}
+
 
 .nav-link {
   position: relative;
@@ -63,4 +95,50 @@
   padding: 1rem;
 }
 
+.section-size {
+  @apply min-h-screen flex flex-col relative;
+}
 
+.font-catamaran {
+  font-family: "Catamaran", sans-serif;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* NOSOTROS*/
+
+.p-700{
+  @apply font-bold;
+  font-family: "Catamaran", sans-serif;
+}
+
+
+.underline-title::before {
+  content: '';
+  display: block;
+  width: 35px; /* Ajusta el ancho según sea necesario */
+  height: 1.5px; /* Ajusta el grosor de la línea según sea necesario */
+  background-color: #5F2DEE; /* Color de la línea */
+  position: relative;
+  bottom: -10px; /* Ajusta la distancia debajo del texto */
+}
+.custom-line-height {
+  line-height: 26.24px;
+}
+
+.custom-line-height1 {
+  line-height: 55px;
+}
+
+.custom-line-height30 {
+  line-height: 30px;
+  font-family: "Catamaran", sans-serif;
+
+}
+
+.custom-width {
+  width: 671px;
+  height: 110px
+}
